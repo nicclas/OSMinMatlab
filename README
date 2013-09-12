@@ -25,11 +25,11 @@ handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
    and make sure that the json.read command is available in order to read JSON 
    into Matlab.
 
-3. Import the JSON data large.json to Matlab with the command:
+3. Import the JSON data large4.json to Matlab with the command:
    
    X=json.read('C:\approrite directory\large4.json')
 
-   (...or replace with your JOSN export file name).
+   (...or replace with your JSON export file name).
 
 4. Move the osmnet.m to the current directory for Malab and run the osmnet 
    script from Matlab. The nodes and ways data are show in a figure, 
