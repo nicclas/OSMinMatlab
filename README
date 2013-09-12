@@ -32,4 +32,4 @@ handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
    (...or replace with your JOSN export file name).
 
 4. Move the osmnet.m to the current directory for Malab and run the osmnet 
-   script from Matlab. The nodes and ways data are show in a figure. 
+   script from Matlab. The nodes and ways data are show in a figure, as seen in large4.jpg. 
