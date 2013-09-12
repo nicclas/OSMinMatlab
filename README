@@ -9,7 +9,7 @@ The script make use of the "geoshow" command in the Matlab Mapping toolbox in or
 handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
 
 
-1. Go to http://overpass.turbo.eu and center and zoom the map the 
+1. Go to http://overpass-turbo.eu and center and zoom the map the 
    the area of interest. Paste the code in the file overpass-turbo-script.txt
    into the Overpass-turbo script window and "Run" the script. 
    If the area is large, the process takes some time. Try with a small 
