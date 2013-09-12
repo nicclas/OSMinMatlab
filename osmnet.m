@@ -20,9 +20,9 @@ for i=1:elementslength
         lat(i)=X(1).elements{i}.lat;
     end
 end
-%geoshow(lat,lon,'displaytype','point','Color','r')
-plot(lat,lon,'+r')
-hold on
+geoshow(lat,lon,'displaytype','point','Color','r')
+%plot(lat,lon,'+r')
+%hold on
 
 % Plot the "ways" defined in the JSON data
 for i=1:elementslength
@@ -44,8 +44,8 @@ for i=1:elementslength
                 lat(p) = point.lat;
                 lon(p) = point.lon;
             end
-%            geoshow(lat,lon,'displaytype','line','Color','b');
-            plot(lat,lon,'b');
+            geoshow(lat,lon,'displaytype','line','Color','b');
+%            plot(lat,lon,'b');
         else
             points = struct2cell(X(1).elements{i}.nodes);
             last = size(points,3);
@@ -53,7 +53,7 @@ for i=1:elementslength
             clear clon;
             if( cell2mat(points(3,1,1)) > 1 & cell2mat(points(3,1,1)) < 20)
                 % Two case, the first when the tags-data is first in the
-                % strcture, the other case when the tags data is the last
+                % structure, the other case when the tags data is the last
                 l = 1;
                 for p=1:last
                     clat(p) = points(5,1,p);
@@ -67,8 +67,8 @@ for i=1:elementslength
             end
             lat = cell2mat(clat);
             lon = cell2mat(clon);
-%            geoshow(lat,lon,'displaytype','line','Color','b');
-            plot(lat,lon,'b');
+            geoshow(lat,lon,'displaytype','line','Color','b');
+%            plot(lat,lon,'b');
         end
     end
 end
