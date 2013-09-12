@@ -1,9 +1,9 @@
 
 
--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 OSMNET for reading OSM data from JSON export and plot graph in Matlab
 Clas Rydergren, 2013-09-12, clas.rydergren@liu.se
--------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------
 
 The script make use of the "geoshow" command in the Matlab Mapping toolbox in order to 
 handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
@@ -15,18 +15,19 @@ handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
    If the area is large, the process takes some time. Try with a small 
    area the first time. 
 
-   Look at the data in the "data" tab. Export the data, and select "raw data" as the format.
-   This will save a file called "export.json" in the download directory. Move this file to some
-   approprite directory. The format of the file shall be the same as for the "large.json" file 
-   included in this repository.
+   Look at the data in the "data" tab. Export the data, and select "raw data" as 
+   the format. This will save a file called "export.json" in the download directory.
+   Move this file to some approprite directory. The format of the file shall be 
+   the same as for the "large.json" file included in this repository.
 
 2. Install the JSON parser from
    http://www.cs.sunysb.edu/~kyamagu/software/json/ 
-   and make sure that the json.read command is available in order to read JSON into Matlab.
+   and make sure that the json.read command is available in order to read JSON 
+   into Matlab.
 
 3. Import the JSON data large.json to Matlab with the command:
    
    X=json.read('C:\approrite directory\large.json')
 
-4. Move the osmnet.m to the current directory for Malab and run the osmnet script from Matlab.
-   The nodes and ways data are show in a figure. 
+4. Move the osmnet.m to the current directory for Malab and run the osmnet 
+   script from Matlab. The nodes and ways data are show in a figure. 
