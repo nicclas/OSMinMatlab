@@ -1,0 +1,48 @@
+<osm-script output="json">
+  <!-- Get "major" car roads -->
+  <query type="way" into="cw1">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="motorway"/>
+  </query>
+  <query type="way" into="cw2">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="motorway_link"/>
+  </query>
+  <query type="way" into="cw3">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="secondary"/>
+  </query>
+  <query type="way" into="cw4">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="unclassified"/>
+  </query>
+  <query type="way" into="cw5">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="residential"/>
+  </query>
+  <query type="way" into="cw6">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="tertiary"/>
+  </query>
+  <query type="way" into="cw7">
+    <bbox-query {{bbox}}/>
+    <has-kv k="highway" v="primary"/>
+  </query>
+  <!-- Combine all ways -->
+  <union into="cw">
+    <item set="cw1"/>
+    <item set="cw2"/>
+    <item set="cw3"/>
+    <item set="cw4"/>
+    <item set="cw5"/>
+    <item set="cw6"/>
+    <item set="cw7"/>
+  </union>
+  <!-- Use recurse to get the underlying ways and nodes -->
+  <union>
+    <item set="cw"/>
+    <recurse from="cw" type="down"/>
+  </union>
+  <!-- Show the result -->
+  <print mode="body" order="quadtile"/>
+</osm-script>
