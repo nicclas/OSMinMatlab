@@ -1,6 +1,6 @@
 
 % OSMNET read OSM data as JSON and plot graph
-% Clas Rydergren, 2013-09-12
+% Clas Rydergren, clas.rydergren@liu.se, 2013-09-12
 % Uses http://www.cs.sunysb.edu/~kyamagu/software/json/ 
 % for reading the JSON into Matlab.
 
