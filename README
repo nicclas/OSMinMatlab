@@ -18,7 +18,7 @@ handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
    Look at the data in the "data" tab. Export the data, and select "raw data" as 
    the format. This will save a file called "export.json" in the download directory.
    Move this file to some approprite directory. The format of the file shall be 
-   the same as for the "large.json" file included in this repository.
+   the same as for the "large4.json" file included in this repository.
 
 2. Install the JSON parser from
    http://www.cs.sunysb.edu/~kyamagu/software/json/ 
@@ -27,7 +27,7 @@ handle the WGS84 projection. The "geoshow" can be replaced by standard "plot".
 
 3. Import the JSON data large.json to Matlab with the command:
    
-   X=json.read('C:\approrite directory\large.json')
+   X=json.read('C:\approrite directory\large4.json')
 
    (...or replace with you JOSN export file name).
 

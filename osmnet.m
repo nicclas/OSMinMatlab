@@ -5,7 +5,7 @@
 % for reading the JSON into Matlab.
 
 % Read the JSON exported from Overpass-turbo.eu as "raw" data (JSON)
-% X=json.read('C:\Users\clary35\Documents\MATLAB\small.json')
+% X=json.read('C:\Users\clary35\Documents\MATLAB\large4.json')
 
 
 elementslength = size(X(1).elements,2);
